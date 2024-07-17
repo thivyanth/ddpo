@@ -13,4 +13,6 @@ def get_config():
 
     config.prompt_fn = "RSICD"
     
+    config.num_epochs = 1000
+    
     return config
