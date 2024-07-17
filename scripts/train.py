@@ -401,7 +401,7 @@ def main(_):
                     "images": [
                         wandb.Image(
                             os.path.join(tmpdir, f"{i}.jpg"),
-                            caption=f"{prompt:.25} | {reward:.2f}",
+                            caption=f"{prompt} | {reward:.2f}",
                         )
                         for i, (prompt, reward) in enumerate(
                             zip(prompts, rewards)
