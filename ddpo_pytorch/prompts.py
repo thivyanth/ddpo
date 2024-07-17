@@ -43,8 +43,12 @@ def imagenet_dogs():
 def simple_animals():
     return from_file("simple_animals.txt")
 
+
+# "satellite image of " + prompt
 def RSICD():
-    return from_file("RSICD.txt")
+    prompts = _load_lines("RSICD.txt")
+    selected_prompt = random.choice(prompts)
+    return "satellite image of " + selected_prompt, {}
 
 def nouns_activities(nouns_file, activities_file):
     nouns = _load_lines(nouns_file)
