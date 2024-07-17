@@ -11,4 +11,6 @@ def get_config():
     # Use the new reward function
     config.reward_fn = "clip_score"
 
+    config.prompt_fn = "RSICD"
+    
     return config

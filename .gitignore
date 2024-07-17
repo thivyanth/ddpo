@@ -307,3 +307,4 @@ wandb/
 logs/
 notebooks/
 .conda
+latest_run.pdf

@@ -1,0 +1,26 @@
+compute_environment: LOCAL_MACHINE
+deepspeed_config:
+  fp16: false
+  zero_optimization:
+    stage: 2
+    offload_optimizer: false
+    offload_parameters: false
+    overlap_comm: true
+    allgather_partitions: true
+    reduce_scatter: true
+    contiguous_gradients: true
+    cpu_offload: false
+distributed_type: MULTI_GPU
+fp16: false
+mixed_precision: fp16
+machine_rank: 0
+main_process_ip: null
+main_process_port: null
+main_training_function: main
+num_machines: 1
+num_processes: 2
+rdzv_backend: static
+# rdzv_endpoint: null
+same_network: true
+use_cpu: false
+gpu_ids: 6,7
